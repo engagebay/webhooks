@@ -22,9 +22,9 @@ EngageBay does not accept incoming webhooks. Instead, you will need to use our A
 
 ### Getting Started
 
-**[How to create a webhook](#1-how-to-create-a-webhook)**
-**[How webhook data is received](#2-how-webhook-data-is-received)**
-**[Sample data (json formatted)](#3-sample-data-json-formatted)**
+* [1 How to create a webhook](#1-how-to-create-a-webhook)
+* [2 How webhook data is received](#2-how-webhook-data-is-received)
+* [Sample data (json formatted)](#3-sample-data-json-formatted)
 
 ### 1 How to create a webhook: 
 
