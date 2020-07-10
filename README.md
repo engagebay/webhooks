@@ -17,8 +17,8 @@ There are a variety of uses for webhooks, such as sending data and pushing notif
 
 NOTE: 
 ```
-EngageBay does not accept incoming webhooks. Instead, you will need to use our API to send information into your account 
-from a 3rd party application.
+EngageBay does not accept incoming webhooks. Instead, you will need to use our API to send 
+information into your account from a 3rd party application.
 ```
 
 ### Getting Started
