@@ -28,9 +28,9 @@ account from a 3rd party application.
 
 * [1 How to create a webhook](#1-how-to-create-a-webhook)
 * [2 How webhook data is received](#2-how-webhook-data-is-received)
-* [Sample data (json formatted)](#3-sample-data-json-formatted)
+* [3 Sample data (json formatted)](#3-sample-data-json-formatted)
 
-### 1 How to create a webhook: 
+### 1. How to create a webhook: 
 
 Whenever you create a webhook, you can choose when to trigger it. For example, you may choose to receive data only when a contact is created or when a contact tag is updated/deleted.
 
@@ -59,14 +59,14 @@ Here’s how to create a webhook from the Account Settings -> Webhooks settings 
 
 6. When finished, click “Add Webhook” on the lower right of opened modal.
 
-### 2 How webhook data is received: 
+### 2. How webhook data is received: 
 
 The data you receive will be passed as a POST parameter to your URL.
 
 A quick and easy way to test the output of your webhooks is to use [RequestBin] (https://requestbin.com/). This service gives you a URL that collects requests made to it and lets you inspect them easily.
 
 
-### 3 Sample data (json formatted): 
+### 3. Sample data (json formatted): 
 
 Request type - Contact Created
 ###### Example 1
