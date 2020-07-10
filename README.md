@@ -125,7 +125,7 @@ Request type - Deal Created
 {
     "event": "deal.created",
     "entity": {
-        "id": 5802786220408832
+	    "id": 5802786220408832
 		"unique_id": 1594305685795
 		"name": "Test Deal"
 		"description": "Test Deal"
@@ -143,7 +143,7 @@ Request type - Deal Updated
 {
     "event": "deal.updated",
     "entity": {
-        "id": 5802786220408832
+	    "id": 5802786220408832
 		"unique_id": 1594305685795
 		"name": "Test Deal"
 		"description": "Test Deal"
