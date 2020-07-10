@@ -1,24 +1,27 @@
 EngageBay Webhooks
 ==================
 
-[EngageBay](https://www.engagebay.com/) is a simple, affordable all-in-one marketing and sales software built for growing businesses. Get the power of an enterprise software at a fraction of the cost.
+[EngageBay](https://www.engagebay.com/) is a simple, affordable, integrated all-in-one marketing, sales, and support software with free CRM built for growing businesses. Get the power of an enterprise software at a fraction of the cost.
 
 ### Overview
 
-A webhook lets an app pass information to other apps in near real-time. This could mean notifying a information from EngageBay to another web application, or a way to notify another 3rd party application that accepts POST requests.
+A webhook (also called a web callback or HTTP push API) allows one application to provide real-time information to other applications. A webhook delivers data to other applications as it happens so you get immediate access to data. 
 
-In EngageBay, webhooks are used to send data from your account into another system or database that has an API that can listen for webhooks (eg, Zapier). They are event driven and allow you to update 3rd party applications with contact activity as they happen.
+Therefore, information from EngageBay may be passed on to another app instantly, or any 3rd party application that accepts POST requests may be notified in real-time. 
 
-There are a variety of uses for webhooks, such as sending data and pushing notifications.
+Webhooks, in EngageBay, are used to transmit data from your account into another system or database that has an API and can identify and receive webhooks (eg, Zapier). These are driven by occurring events and they allow you to update 3rd party apps with contact activity as they occur.
 
-- Posting EngageBay contacts data to another system, such as a CRM, when that contact fills out a particular form on your site.
-- Sending deal data to an external shipment-handling system to create a purchase order.
-- Sending company data to another system, such as a CRM, when that contact fills out a particular form on your site.
+
+Webhooks have a number of uses such as pushing notifications and sending data.
+
+- Posts EngageBay contacts data to another system, e.g. to a CRM. 
+- In order to create a purchase order, webhooks pass on deal data to an external shipment-handling system. 
+- When a contact fills out a particular form on your site, webhooks send contact data to another system, e.g. to a CRM.
 
 NOTE: 
 ```
-EngageBay does not accept incoming webhooks. Instead, you will need to use our API to send 
-information into your account from a 3rd party application.
+EngageBay does not accept incoming webhooks. You are required to use our API to 
+send information to your account from a 3rd party application.
 ```
 
 ### Getting Started
@@ -29,21 +32,21 @@ information into your account from a 3rd party application.
 
 ### 1 How to create a webhook: 
 
-With every webhook you create, you can choose when it should fire. For example, you may only want to receive data when a contact is created or you may want to only receive data when a contact tag is updated/deleted.
+Whenever you create a webhook, you can choose when to trigger it. For example, you may choose to receive data only when a contact is created or when a contact tag is updated/deleted.
 
-In this section, you'll learn how to create a webhook from the Account Settings -> Webhooks settings page.
+Here’s how to create a webhook from the Account Settings -> Webhooks settings page.
 
 1. Click “Add Webhook” to create a webhook.
-2. Type the name of your webhook in the Name field
-3. Select which event webhook will be associated with by clicking the dropdown
-4. Type the URL from your integration or application where you want to send information to. This URL will need to come from your 3rd party application or integration.
+2. Enter the webhook name of your choice in the field ‘Name’ 
+3. Select the webhook associated event by clicking the dropdown
+4. Enter the destination URL from your integration/app where you want the information to be sent. This URL should be from your 3rd party app/integration.
 
 ![alt text](https://lh3.googleusercontent.com/8dgqi18u48TXkl2ReEn5wCXqe16LsLbeJK1Hl4EOMQ-qZaVr3gEce09Xuv5v6HmWmkczpi9pDJaFIb3L09xsW8HK9T2BZJTQgvEsssa4N7R3YXRfCR0S-H3M6_8Hbha1o4MsVjPS)
 
 5. Click the boxes next to any action/event that will trigger your webhook:
 
 - Contact created
--  Contact updated
+- Contact updated
 - Contact deleted
 - Company created
 - Company updated
@@ -58,9 +61,9 @@ In this section, you'll learn how to create a webhook from the Account Settings 
 
 ### 2 How webhook data is received: 
 
-The data you receive will be sent as a POST parameter to your URL. 
+The data you receive will be passed as a POST parameter to your URL.
 
-The easiest way to test the output of your webhooks is to use a service such as [RequestBin] (https://requestbin.com/). This service will give you a URL that will collect requests made to it and let you inspect them in a human-friendly way.
+A quick and easy way to test the output of your webhooks is to use [RequestBin] (https://requestbin.com/). This service gives you a URL that collects requests made to it and lets you inspect them easily.
 
 
 ### 3 Sample data (json formatted): 
@@ -127,13 +130,13 @@ Request type - Deal Created
     "event": "deal.created",
     "entity": {
 	    "id": 5802786220408832
-		"unique_id": 1594305685795
-		"name": "Test Deal"
-		"description": "Test Deal"
-		"amount": 200
-		"track_id": 5634472569470976,
-		"milestoneLabelName": "New",
-		"owner_id": 5358693205934080
+	"unique_id": 1594305685795
+	"name": "Test Deal"
+	"description": "Test Deal"
+	"amount": 200
+	"track_id": 5634472569470976,
+	"milestoneLabelName": "New",
+	"owner_id": 5358693205934080
     }
 }
 ```
@@ -145,13 +148,13 @@ Request type - Deal Updated
     "event": "deal.updated",
     "entity": {
 	    "id": 5802786220408832
-		"unique_id": 1594305685795
-		"name": "Test Deal"
-		"description": "Test Deal"
-		"amount": 200
-		"track_id": 5634472569470976,
-		"milestoneLabelName": "New",
-		"owner_id": 5358693205934080
+	"unique_id": 1594305685795
+	"name": "Test Deal"
+	"description": "Test Deal"
+	"amount": 200
+	"track_id": 5634472569470976,
+	"milestoneLabelName": "New",
+	"owner_id": 5358693205934080
     }
 }
 ```
