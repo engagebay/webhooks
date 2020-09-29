@@ -43,8 +43,9 @@ Here’s how to create a webhook from the Account Settings -> Webhooks settings 
 
 NOTE: 
 ```
-The destination URL supports personlization with muscahe compiler format. It behaves like dynamic URL with 
-personalization values. Ex: https://xxx.yourdomain.com?id={{entity.id}}
+The destination URL supports personlization with muscahe compiler format. It behaves like dynamic URL 
+with personalization values. 
+Ex: https://xxx.yourdomain.com?id={{entity.id}}
 ```
 
 ![alt text](https://lh3.googleusercontent.com/8dgqi18u48TXkl2ReEn5wCXqe16LsLbeJK1Hl4EOMQ-qZaVr3gEce09Xuv5v6HmWmkczpi9pDJaFIb3L09xsW8HK9T2BZJTQgvEsssa4N7R3YXRfCR0S-H3M6_8Hbha1o4MsVjPS)
