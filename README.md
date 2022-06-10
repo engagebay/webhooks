@@ -61,6 +61,9 @@ Ex: https://yourdomain.com?id={{entity.id}}
 - Deal created
 - Deal updated
 - Deal deleted
+- Email opened
+- Email link clicked
+- Email replied
 
 ![alt text](https://lh5.googleusercontent.com/Rym1pSCa7Pl6GaNP1fVt2J-Vcqs44K65_hZ-dowCLdfHqShEYKmoMW6NWgiKo30YobaZkH-ujz4lS_DywEe9my0PNDOn7srhjX9Z-dcvMUn3GaSxeWJ4btB3cXv72AIGTI0Vizlo)
 
@@ -162,6 +165,42 @@ Request type - Deal Updated
 	"track_id": 5634472569470976,
 	"milestoneLabelName": "New",
 	"owner_id": 5358693205934080
+    }
+}
+```
+
+Request type - Email Opened
+
+###### Example 4
+```javascript
+{
+    "event": "email.open",
+    "entity": {
+        "id": 5667649732233534,
+        "time": 1455855737,
+        "campaignId": 5998935441145856,
+	"campaignName": "Email Newsletter",
+	"emailId": 5849401859768320,
+	"contact":{
+		"id": 5667649732233534,
+		"created_time": 1455855737,
+		"updated_time": 1455856605,
+		"properties": [
+		    {
+			"name": "name",
+			"value": "Peter"
+		    },
+		    {
+			"name": "lastname",
+			"value": "Ross"
+		    },
+		    {
+			"name": "email",
+			"value": "peter@yahoo.com"
+		    }
+		]
+	    }
+        }
     }
 }
 ```
